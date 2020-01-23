@@ -1,6 +1,6 @@
 <?php 
 	
-	include('dbcon.php');
+	include('../dbcon.php');
 	$name = $_POST['name'];
 	$password = $_POST['pass'];
 	$id = $_POST['sid'];
@@ -12,8 +12,8 @@
 		if ($run == TRUE) {
 			?>
 			<script>
-				alert("Data UPDATE successfully");
-				window.open('changepasword.php?sid=<?php echo $id; ?>','_self');
+				alert("password Change successfully");
+				window.open('../logout.php','_self');
 			</script>
 			<?php
 		}else{

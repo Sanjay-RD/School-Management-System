@@ -16,9 +16,9 @@
 
  	include('../dbcon.php');
 
- 	$sid = $_GET['sid'];
+ 	$id = $_GET['sid'];
 
- 	$query ="SELECT * FROM `student` WHERE `id`='$sid'";
+ 	$query ="SELECT * FROM `student` WHERE `id`='$id'";
 
  	$run = mysqli_query($con,$query);
 

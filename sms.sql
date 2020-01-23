@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2020 at 01:22 PM
+-- Generation Time: Jan 23, 2020 at 09:47 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -65,8 +65,9 @@ INSERT INTO `student` (`id`, `name`, `roll no`, `Address`, `Standard`, `image`) 
 (10, 'admin', 12, 'ktm', '33', '81369392_2511685282435578_7627053450232070144_n.jpg'),
 (13, 'hari dai 1', 23, 'bhartaput12', '+23', 'JHAPA    15X3     15TH   JAN   2020.jpg'),
 (14, 'Dharma dai', 57, 'ktm', 'Designer', 'Untitled-14.jpg'),
-(16, 'sanjay', 12, 'ktm', '21', 'img3.jpg'),
-(17, 'hari', 11, 'babarmahal', '12', 'img1.jpg');
+(16, 'sanjay  12', 12, 'ktm', '21', 'img3.jpg'),
+(17, 'hari', 11, 'babarmahal', '12', 'img1.jpg'),
+(18, 'saurav dai', 22, 'patan', 'reporter', 'img1.jpg');
 
 --
 -- Indexes for dumped tables
@@ -98,7 +99,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

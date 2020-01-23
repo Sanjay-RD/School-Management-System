@@ -12,13 +12,25 @@
 
  ?>
 
+<?php 
 
+	include('../dbcon.php');
+
+	$id = $_GET['sid'];
+
+	$query = "SELECT * FROM `admin` WHERE id = '$id'";
+
+	$run = mysqli_query($con,$query);
+
+	$data = mysqli_fetch_assoc($run);
+
+ ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="../style/style.css">
 	<style type="text/css">
 		input[type="password"] {
 		    outline: none;
@@ -43,7 +55,7 @@
 			</tr>
 			<tr>
 				<td colspan="2" class="text-center">
-					<input type="hidden" name="sid" value="<?php echo $_SESSION['id']; ?>">
+					<input type="hidden" name="sid" value="<?php echo $data['id']; ?>">
 					<input type="submit" name="submit" class="submit" value="Change Password">
 				</td>
 			</tr>
@@ -51,9 +63,3 @@
 	</form>
 </body>
 </html>
-
-<?php 
-
-	
-
- ?>

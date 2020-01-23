@@ -22,9 +22,13 @@
  	<div class="heading">
 		<h1>Welcome to the School Management System</h1>
 	</div>
+	<div class="box box-1">
+		<a href="../changepass/changepassword.php?sid=<?php echo $_SESSION['uid'];?>" class="left-box">Change Password</a>
+	</div>
 	<div class="box">
 		<a href="../logout.php" class="left-box">logout</a>
 	</div>
+	
  	
 
  	<table>

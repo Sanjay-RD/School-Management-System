@@ -73,9 +73,7 @@
 		</div>
 		
 		<input type="submit" name="submit" value="Login"><br>
-		<!-- <a class="form-link" href="">Forget password</a><br>
-		<a class="form-link" href="">Change Password</a> -->
-		<input type="submit" name="change" value="Change Password">
+		<a class="form-link" href="">Forget password</a><br>
 	</form>
 </body>
 </html>
@@ -120,41 +118,4 @@
  ?>
 
 
- <?php 
-	include('dbcon.php');
-	if (isset($_POST['change'])) {
-			
-		$name = $_POST['name'];
-		$password = $_POST['pass'];
-
-		$query = "SELECT * FROM `admin` WHERE `username` = '$name' AND `password` = '$password'";
-
-		$run = mysqli_query($con,$query);
-
-		$row = mysqli_num_rows($run);
-
-		if ($row<1) {
-			?>
-			<script>
-				alert("Username or Password does not match");
-				window.open('login.php','_SELF');
-			</script>
-			<?php
-		}
-		else
-		{
-			$data = mysqli_fetch_assoc($run);
-
-			$id = $data['id'];
-			
-			
-
-			$_SESSION['uid'] = $id;
-
-			header('location:changepassword.php');
-		}
-
-
-	}
-
- ?>
+ 
